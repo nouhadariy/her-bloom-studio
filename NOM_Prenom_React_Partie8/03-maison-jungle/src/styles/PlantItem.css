@@ -1,0 +1,119 @@
+
+.lmj-plant-item {
+  overflow: hidden;
+  border: 1px solid #f0e1e7;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 7px 25px #70445208;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.lmj-plant-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #70445215;
+}
+
+.plant-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: .95;
+  background: #f8eaf0;
+}
+
+.lmj-plant-item-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.lmj-plant-item:hover .lmj-plant-item-cover {
+  transform: scale(1.05);
+}
+
+.plant-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 8px 11px;
+  border-radius: 20px;
+  background: #fffaf6ef;
+  color: #a45173;
+  font-size: 9px;
+}
+
+.plant-favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  color: #c66c8d;
+  font-size: 22px;
+}
+
+.plant-card-content { padding: 19px; }
+
+.plant-category {
+  margin: 0 0 7px;
+  color: #b16a87;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.plant-card-content h3 {
+  margin: 0 0 17px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.plant-care {
+  display: grid;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #f3e8ed;
+  border-bottom: 1px solid #f3e8ed;
+}
+
+.care-scale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.care-label { color: #8b7680; font-size: 11px; }
+
+.care-icons { display: flex; gap: 5px; }
+
+.care-icon { width: 17px; height: 17px; }
+
+.plant-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.plant-price { font-size: 12px; font-weight: 700; }
+
+.plant-add-button {
+  width: 35px;
+  height: 35px;
+  border: 0;
+  border-radius: 50%;
+  background: #f8e5ed;
+  color: #a4476c;
+  font-size: 23px;
+}
+
+.plant-add-button:hover {
+  background: #b94f78;
+  color: white;
+}
