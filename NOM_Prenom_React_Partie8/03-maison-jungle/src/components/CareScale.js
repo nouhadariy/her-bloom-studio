@@ -1,31 +1,43 @@
+import Sun from '../assets/sun.svg'
+import Water from '../assets/water.svg'
 
-import Sun from '../assets/sun.svg';
-import Water from '../assets/water.svg';
-
-function CareScale({ scaleValue, careType }) {
-  const scaleType =
-    careType === 'light'
-      ? { icon: Sun, label: 'Ensoleillement' }
-      : { icon: Water, label: 'Arrosage' };
-
-  return (
-    <div className="care-scale">
-      <span className="care-label">{scaleType.label}</span>
-
-      <div className="care-icons">
-        {[1, 2, 3].map((level) =>
-          scaleValue >= level ? (
-            <img
-              key={level}
-              src={scaleType.icon}
-              alt=""
-              className="care-icon"
-            />
-          ) : null
-        )}
-      </div>
-    </div>
-  );
+const quantityLabel = {
+    1: 'peu',
+    2: 'modérément',
+    3: 'beaucoup'
 }
 
-export default CareScale;
+function CareScale({ scaleValue, careType }) {
+    const range = [1, 2, 3]
+
+    const scaleType =
+        careType === 'light' ? (
+            <img src={Sun} alt="sun-icon" />
+        ) : (
+            <img src={Water} alt="water-icon" />
+        )
+
+    return (
+        <div
+            onClick={() =>
+                alert(
+                    `Cette plante requiert ${quantityLabel[scaleValue]} ${
+                        careType === 'light'
+                            ? 'de lumière'
+                            : "d'arrosage"
+                    }`
+                )
+            }
+        >
+            {range.map((rangeElem) =>
+                scaleValue >= rangeElem ? (
+                    <span key={rangeElem.toString()}>
+                        {scaleType}
+                    </span>
+                ) : null
+            )}
+        </div>
+    )
+}
+
+export default CareScale

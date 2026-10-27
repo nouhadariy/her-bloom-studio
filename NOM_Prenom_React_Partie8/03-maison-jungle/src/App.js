@@ -2,6 +2,7 @@
 import Banner from './components/Banner';
 import ShoppingList from './components/ShoppingList';
 import './styles/App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -56,10 +57,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <p>HER BLOOM STUDIO ♡</p>
-        <span>Flowers, feelings & little things.</span>
-      </footer>
+     <Footer />
     </div>
   );
 }
